@@ -1,10 +1,11 @@
 .circle {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  justify-content: center;
+  width: 450px;
+  height: 450px;
+  margin-left: 240px;
   border-radius: 100%;
-  background-color: turquoise;
-  animation: move-the-circle 1s infinite;
+  animation: move-the-circle 0.7s infinite;
   transform-origin: center center;
 }
 
@@ -14,47 +15,47 @@
 }
 
 .circle:nth-child(2) {
-  left: 30px;
+  left: 70px;
   animation-delay: 0.2s;
 }
 
 .circle:nth-child(3) {
-  left: 60px;
+  left: 140px;
   animation-delay: 0.3s;
 }
 
 .circle:nth-child(4) {
-  left: 90px;
+  left: 210px;
   animation-delay: 0.4s;
 }
 
 .circle:nth-child(5) {
-  left: 120px;
+  left: 280px;
   animation-delay: 0.5s;
 }
 
 .circle:nth-child(6) {
-  left: 150px;
+  left: 350px;
   animation-delay: 0.6s;
 }
 
 .circle:nth-child(7) {
-  left: 180px;
+  left: 420px;
   animation-delay: 0.7s;
 }
 
 .circle:nth-child(8) {
-  left: 210px;
+  left: 490px;
   animation-delay: 0.8s;
 }
 
 .circle:nth-child(9) {
-  left: 240px;
+  left: 560px;
   animation-delay: 0.9s;
 }
 
 .circle:nth-child(10) {
-  left: 270px;
+  left: 630px;
   animation-delay: 1s;
 }
 
@@ -63,7 +64,7 @@
     transform: translate(0, 0);
   }
   50% {
-    transform: translate(0, 50px);
+    transform: translate(0, 80px);
   }
   100% {
     transform: translate(0, 0);
