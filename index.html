@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rendered Data Display</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      #renderedContent {
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="renderedContent">
+      <!-- Fetched content will be dynamically loaded here -->
+      <input type="color" id="colorPicker" />
+      <button id="submitBtn">Generate</button>
+    </div>
+    <div id="result"></div>
+    <script src="script.js"></script>
+    <!-- <script>
+     //   const submitButton = document.getElementById('submitBtn')
+
+       // submitButton.addEventListener('click', ()=> {
+         //   console.log('click')
+        //})
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('https://colour-web-service.onrender.com')
+                .then((response) => {
+                    // Check if response is JSON
+                    const contentType = response.headers.get('content-type');
+                    if (contentType && contentType.indexOf('application/json') !== -1) {
+                        return response.json();
+                    } else {
+                        return response.text(); 
+                    }
+                })
+                .then((data) => {
+                    const manipulatedData = manipulateData(data);
+                    document.getElementById('renderedContent').innerHTML = manipulatedData;
+                })
+                .catch((error) => {
+                    console.error('Error fetching render file:', error);
+                });
+        });
+
+        function manipulateData(data) {
+            if (typeof data === 'object') {
+                return `<pre>${JSON.stringify(data, null, 2)}</pre>`; 
+            } else {
+                return `<pre>${data}</pre>`; 
+            }
+        }
+    </script> -->
+  </body>
+</html>

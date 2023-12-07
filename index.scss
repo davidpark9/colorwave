@@ -1,0 +1,28 @@
+.circle{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: turquoise;
+  animation: move-the-circle 1s infinite;
+  transform-origin: center center;
+}
+
+@for $num from 1 through 10 {
+  .circle:nth-child(#{$num}) {
+    left: ($num - 1) * 30px;
+    animation-delay: $num * .1s;
+  }
+}
+
+@keyframes move-the-circle {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
